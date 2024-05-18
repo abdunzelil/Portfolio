@@ -404,9 +404,11 @@ span {
 
 .skills {
     background-color: var(--bg-color);
+    justify-content: center;
+    align-items: center;
 }
 
-.skills .container {
+.skills .skills-container {
     background: var(--second-bg-color);
     color: white;
     border-radius: 1rem;
@@ -414,48 +416,50 @@ span {
     width: 80%;
     margin: auto;
     margin-top: 2rem;
-}
-
-.skills .container .row {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    flex-wrap: wrap;
-    gap: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    width: 80%;
+    max-width: 1000px;
 }
 
-.skills .container .bar {
-    text-align: center;
-    margin-bottom: 15px;
-    padding: 0 2.2rem; 
-    border-radius: 1rem;
-    background: var(--second-bg-color);
-    
-    transition: 0.3s ease;
-}
-
-.skills .container .bar:hover {
-    box-shadow: 0 4px 10px var(--main-color);
-    cursor: pointer;
-    transform: scale(1.05);
-}
-
-.skills .container .bar .info {
+.skill {
+    min-width: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.skills .container .bar .info span {
-    font-size: 2rem;
-    font-weight: 500;
-    margin-left: 0.5rem;
-}
-
-.skills .container .bar .info img {
-    float: left;
-    width:  100px;
-    height: 100px;
-    object-fit: cover;
-}
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px var(--main-color);
+    border-radius: 8px;
+    transition: transform 0.2s;
+  }
+  
+  .skill img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .skill p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .skill:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px var(--main-color);
+  }
+  
+  @media (max-width: 768px) {
+    .skills-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .skills-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
