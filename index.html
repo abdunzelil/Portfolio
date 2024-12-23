@@ -1,164 +1,77 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not Responsive</title>
-    <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>Simple Cool Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212;
+            font-family: 'Poppins', sans-serif;
+            padding: 5%;
+        }
+
+        h1 {
+            width: 75%;
+            margin: 0 auto;
+            margin-bottom: 5vh;
+            font-size: clamp(32px, 6vw, 64px);
+            background: linear-gradient(90deg, rgb(0, 153, 255), #8400ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .icons-container {
+            display: flex;
+            gap: 5%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .icon {
+            width: 20%;
+            aspect-ratio: 1;
+            background-color: black;
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .icon img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .icon:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px 5px blue;
+        }
+    </style>
 </head>
-
 <body>
-    <header class="header">
-        <a href="#home" class="logo">Mustafa
-            <span>Ocak</span></a>
-
-        <i class="bx bx-menu" id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hi, I am <span>Mustafa</span></h1>
-            <h3 class="text-animation">I'm a <span></span></h3>
-            <p> This page is not responsive with a purpose to see if anyone reads this message.
-            </p>
-
-            <div class="social-icons">
-                <a href="#"><i class='bx bxl-linkedin'></i></a>
-                <a href="#"><i class='bx bxl-github'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
-
-
+    <h1>Hoş geldin.</h1>
+    <div class="icons-container">
+        <div class="icon">
+            <img src="logo1.png" alt="Logo 1">
         </div>
-        <div class="home-img">
-            <img src="images/linkedinresmim.jpeg" alt="">
+        <div class="icon">
+            <img src="logo2.png" alt="Logo 2">
         </div>
-    </section>
-
-    <section class="experience" id="experience">
-        <h2 class="heading">Experience</h2>
-
-        <div class="timeline-items">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2021</div>
-                <div class="timeline-content">
-                    <h3>Boğaziçi University</h3>
-                    <p> I entered the university scoring 102nd in the national exam.
-                        I am currently studying Computer Engineering and takin courses
-                        about programming, CS concepts, hardware and more.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2022</div>
-                <div class="timeline-content">
-                    <h3>Derece Koçluk</h3>
-                    <p> I satarted my own company which focuses
-                        on student coaching. I managed all the
-                        employees and customers.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2023</div>
-                <div class="timeline-content">
-                    <h3>Architecht</h3>
-                    <p> I entered Architecht which is a finance
-                        company owned by KuveytTurk,
-                        one of the largest banks in the East.
-                    </p>
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-date">2024</div>
-                <div class="timeline-content">
-                    <h3>AyshTech - Lead Developer</h3>
-                    <p> I have started working full-time for a software company
-                        and currently leading a game studio under it consisting of 6 people.
-                    </p>
-                </div>
-            </div>
+        <div class="icon">
+            <img src="logo3.png" alt="Logo 3">
         </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <h2 class="heading">Skills</h2>
-        <div class="skills-container">
-            <div class="skill">
-                <img src="images/react.png" alt="React">
-                <p>React</p>
-            </div>
-            <div class="skill">
-                <img src="images/javascript.png" alt="Another Skill">
-                <p>JavaScript</p>
-            </div>
-            <div class="skill">
-                <img src="images/Python.png" alt="Another Skill">
-                <p>Python</p>
-            </div>
-            <div class="skill">
-                <img src="images/Java.png" alt="Another Skill">
-                <p>Java</p>
-            </div>
-            <div class="skill">
-                <img src="images/csharp.png" alt="Another Skill">
-                <p>C#</p>
-            </div>
-            <div class="skill">
-                <img src="images/godot.png" alt="Another Skill">
-                <p>Godot</p>
-            </div>
-            <div class="skill">
-                <img src="images/sql.png" alt="Another Skill">
-                <p>SQL</p>
-            </div>
-            <div class="skill">
-                <img src="images/node.png" alt="Another Skill">
-                <p>Node JS</p>
-            </div>
-    
-        </div>
-    </section>
-<!--
-    <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-        <form action="">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" placeholder="Full Name">
-                    <input type="email" placeholder="Your Email">
-                </div>
-                <div class="input-box">
-                    <input type="number" placeholder="Phone Number">
-                    <input type="text" placeholder="Subject">
-                </div>
-                <div class="input-group-2">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
-                    <input type="submit" value="Send Message">
-                </div>
-            </div>
-        </form>
-    </section> -->
-
-    <script src="app.js"></script>
+    </div>
 </body>
-
 </html>
