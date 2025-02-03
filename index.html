@@ -1,77 +1,90 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Cool Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: #121212;
-            font-family: 'Poppins', sans-serif;
-            padding: 5%;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Takipte Kal</title>
+  <!-- Import Poppins font from Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General styles */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+      color: white;
+      font-family: 'Poppins', sans-serif;
+    }
 
-        h1 {
-            width: 75%;
-            margin: 0 auto;
-            margin-bottom: 5vh;
-            font-size: clamp(32px, 6vw, 64px);
-            background: linear-gradient(90deg, rgb(0, 153, 255), #8400ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-align: center;
-        }
+    /* Gradient text for the main heading */
+    h1 {
+      font-size: 3rem;
+      background: linear-gradient(90deg, blue, purple);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4rem; /* Increased spacing */
+      font-weight: 600;
+    }
 
-        .icons-container {
-            display: flex;
-            gap: 5%;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+    /* Social media icons container */
+    .social-icons {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem; /* Increased spacing between icons */
+    }
 
-        .icon {
-            width: 20%;
-            aspect-ratio: 1;
-            background-color: black;
-            border-radius: 5%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: all 0.3s ease;
-        }
+    /* Individual icon styles */
+    .social-icon {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem; /* Increased spacing between icon and text */
+      font-size: 1.2rem;
+      color: turquoise;
+      text-decoration: none;
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
 
-        .icon img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
+    .social-icon:hover {
+      transform: scale(1.1);
+      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+    }
 
-        .icon:hover {
-            transform: scale(1.1);
-            box-shadow: 0 0 20px 5px blue;
-        }
-    </style>
+    /* Icon images */
+    .social-icon img {
+      width: 32px;
+      height: 32px;
+      filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.7));
+    }
+  </style>
 </head>
 <body>
-    <h1>Hoş geldin.</h1>
-    <div class="icons-container">
-        <div class="icon">
-            <img src="logo1.png" alt="Logo 1">
-        </div>
-        <div class="icon">
-            <img src="logo2.png" alt="Logo 2">
-        </div>
-        <div class="icon">
-            <img src="logo3.png" alt="Logo 3">
-        </div>
-    </div>
+  <h1>Takipte kalmak için:</h1>
+  <div class="social-icons">
+    <a href="#" class="social-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube">
+      <span>Mustafa Ocak</span>
+    </a>
+    <a href="#" class="social-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+      <span>@mustafaocakxyz</span>
+    </a>
+    <a href="#" class="social-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">
+      <span>@mustafaocakxyz</span>
+    </a>
+    <a href="#" class="social-icon">
+      <img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" alt="LinkedIn">
+      <span>@mustafaocak.xyz</span>
+    </a>
+  </div>
+
+  <script>
+    // Optional: Add interactivity or animations here
+  </script>
 </body>
 </html>
